@@ -6,32 +6,31 @@
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 15:02:11 by javirodr          #+#    #+#             */
-/*   Updated: 2022/04/24 17:15:23 by javirodr         ###   ########.fr       */
+/*   Updated: 2022/04/24 19:02:17 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <libc.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+int ft_strlen(const char *s)
 {
-	while (n > 0)
+    int a;
+
+    a = 0;
+    while (s[a] != '\0')
+        a++;
+    return (a);
+}
+
+void	*ft_memcpy(void *restrict dst, const void *restrict src, int n)
+{
+	while ((const char *)src && n > 0 && ft_strlen(dst) > n)
 	{
-		*dst = *src;
+		dst = (char *)src;
 		dst++;
 		src++;
 		n--;
 	}
-	return(dst);
-}
-
-int	main(void)
-{
-	char dst[10] = "";
-	char src[] = "Hola que tal";
-	int a = 4;
-	memcpy(dst, src, a);
-	ft_memcpy(dst, src, a);
-	printf("original: %s", dst);
-	printf("mia: %s", dst);
+	return (dst);
 }
