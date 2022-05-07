@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 18:59:47 by javirodr          #+#    #+#             */
-/*   Updated: 2022/04/28 21:26:24 by javirodr         ###   ########.fr       */
+/*   Created: 2022/05/02 16:20:14 by javirodr          #+#    #+#             */
+/*   Updated: 2022/05/02 17:42:02 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, unsigned int n)
 {
-	char *str;
-
-	str = (char *)s;
-	while (*str != c)
+	unsigned int i;
+	i = 0;
+	while (i < n)
 	{
-		if (*str == '\0')
-		{
-			return (NULL);
-		}
-		str++;
+		if (*(unsigned char *)&s[i] == (unsigned char)c)
+			return ((void *) &s[i]);
+	i++;
 	}
-	return (str);
+	return (0);
 }

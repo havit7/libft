@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 18:59:47 by javirodr          #+#    #+#             */
-/*   Updated: 2022/04/28 21:26:24 by javirodr         ###   ########.fr       */
+/*   Created: 2022/05/02 18:07:20 by javirodr          #+#    #+#             */
+/*   Updated: 2022/05/02 18:25:12 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {
-	char *str;
+	unsigned int i;
+	unsigned char *st1;
+	unsigned char *st2;
 
-	str = (char *)s;
-	while (*str != c)
+	st1 = (unsigned char *) s1;
+	st2 = (unsigned char *) s2;
+
+	i = 0;
+	while (i < n)
 	{
-		if (*str == '\0')
+		if (st1[i] != st2[i])
 		{
-			return (NULL);
+			return (st1[i] - st2[i]);
 		}
-		str++;
+		i++;
 	}
-	return (str);
+	return (0);
 }

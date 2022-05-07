@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 18:59:47 by javirodr          #+#    #+#             */
-/*   Updated: 2022/04/28 21:26:24 by javirodr         ###   ########.fr       */
+/*   Created: 2022/05/05 17:36:26 by javirodr          #+#    #+#             */
+/*   Updated: 2022/05/05 18:31:20 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	char *str;
+	unsigned int a;
+	unsigned char *s11;
+	unsigned char *s22;
 
-	str = (char *)s;
-	while (*str != c)
-	{
-		if (*str == '\0')
-		{
-			return (NULL);
-		}
-		str++;
-	}
-	return (str);
+	a = 0;
+	s11 = (unsigned char *)s1;
+	s22 = (unsigned char *)s2;
+	while(s11[a] != '\0' && s22[a] != '\0' && a < (n-1) && s11[a] == s22[a])
+		a++;
+	return (s11[a] - s22[a]);
 }

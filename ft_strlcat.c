@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 18:59:47 by javirodr          #+#    #+#             */
-/*   Updated: 2022/04/28 21:26:24 by javirodr         ###   ########.fr       */
+/*   Created: 2022/05/05 20:21:37 by javirodr          #+#    #+#             */
+/*   Updated: 2022/05/07 17:44:56 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+unsigned int    ft_strlcat(char *dst, const char *src, unsigned int dstsize)
 {
-	char *str;
+    unsigned int a;
+	unsigned int b; 
 
-	str = (char *)s;
-	while (*str != c)
+	a = 0;
+	b = ft_strlen(dst);
+
+    if (!dst || !src)
+        return (0);
+    if (dstsize == 0 || !src)
+        return (b);
+    while (src[a] != '\0')
 	{
-		if (*str == '\0')
-		{
-			return (NULL);
-		}
-		str++;
+        dst[b] = src[a];
+		b++;
+		a++;
 	}
-	return (str);
+	dst[b] = '\0';
+    return (dstsize);
 }
