@@ -6,10 +6,9 @@
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:18:13 by javirodr          #+#    #+#             */
-/*   Updated: 2022/04/24 17:22:15 by javirodr         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:30:46 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 void	*ft_bzero(void *s, unsigned int n)
 {

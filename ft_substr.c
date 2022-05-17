@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 18:50:23 by javirodr          #+#    #+#             */
-/*   Updated: 2022/05/16 18:43:36 by javirodr         ###   ########.fr       */
+/*   Created: 2022/05/16 17:15:24 by javirodr          #+#    #+#             */
+/*   Updated: 2022/05/16 18:49:50 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int	a;
 
 	a = 0;
-	while (s[a] != '\0')
-		a++;
-	return (a);
 }

@@ -6,7 +6,7 @@
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 19:27:43 by javirodr          #+#    #+#             */
-/*   Updated: 2022/05/05 20:20:46 by javirodr         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:46:21 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int dstsize)
 {
-	unsigned int a;
+	unsigned int	a;
 
 	a = 0;
 	if (!dst || !src)

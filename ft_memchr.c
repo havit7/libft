@@ -6,13 +6,14 @@
 /*   By: javirodr <javirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 16:20:14 by javirodr          #+#    #+#             */
-/*   Updated: 2022/05/02 17:42:02 by javirodr         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:37:39 by javirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memchr(const void *s, int c, unsigned int n)
 {
-	unsigned int i;
+	unsigned int	i;
+
 	i = 0;
 	while (i < n)
 	{
