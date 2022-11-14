@@ -1,3 +1,3 @@
 # libft
 LIBFT
-yy
+Recreation main functions of C.
