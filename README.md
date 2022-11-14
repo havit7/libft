@@ -1,3 +1,3 @@
-# libft
-LIBFT
+# LIBFT-LIBC
+
 Recreation main functions of C.
